@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>colunas - Revista Histeria</title>
+
+    <!-- Scripts e Fontes (Mesmos do index) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles-pages.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR (Igual ao index) -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/logo-revista-histeria_33 cópia.png" alt="Logo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./musica.html" class="nav-item">Musica</a></li>
+          <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+          <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
+          <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+          <li class="dropdown-wrapper">
+            <button class="nav-item dropdown-btn">
+              Editorias <i data-lucide="chevron-down" class="icon-sm"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a href="./eventos.html">Eventos</a>
+              <a href="./colunas.html">Colunas</a>
+            </div>
+          </li>
+        </ul>
+        <button id="mobile-menu-btn" class="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="#">Música</a>
+        <a href="#">Cinema/TV</a>
+        <a href="#">Literatura</a>
+      </div>
+    </nav>
+
+    <!-- CONTEÚDO DA CATEGORIA -->
+    <!-- Mude a classe 'theme-music' para 'theme-cinema' ou 'theme-lit' para mudar as cores -->
+    <main class="theme-colunas">
+      <!-- Cabeçalho da Editoria -->
+      <header class="category-header" id="colunas">
+        <div class="container cat-header-content">
+          <div class="cat-icon-box">
+            <!-- Ícone muda conforme a pagina (Music, Film, Book, etc) -->
+            <i data-lucide="pen-tool"></i>
+          </div>
+          <div class="cat-title">
+            <span>Editoria</span>
+            <h1>Colunas</h1>
+          </div>
+        </div>
+        <!-- Texto decorativo fundo -->
+      </header>
+
+      <section class="category-content" id="colunas">
+        <div class="container">
+          <!-- Notícia Destaque -->
+          <article
+            class="featured-article"
+            onclick="window.location.href='noticia.html'"
+          >
+            <div class="feat-img">
+              <img
+                src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1000&auto=format&fit=crop"
+                alt="Destaque"
+              />
+              <span class="badge-float">Destaque</span>
+            </div>
+            <div class="feat-info">
+              <div class="meta">
+                <span class="text-pink">12 FEV 2025</span>
+              </div>
+              <h2>O retorno triunfal das bandas de garagem</h2>
+              <p>
+                Uma análise profunda sobre como o cenário underground está
+                dominando as paradas globais novamente.
+              </p>
+              <div class="btn-read">
+                Ler Matéria Completa <i data-lucide="arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- Grid de Outras Notícias -->
+          <div class="news-grid-3">
+            <!-- Item 1 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Festival de Verão anuncia Line-up</h3>
+                <p>
+                  Confira as atrações confirmadas para o maior evento do ano.
+                </p>
+                <div class="card-meta">
+                  <span>Há 2 horas</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 2 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>A psicologia por trás dos hits</h3>
+                <p>Por que algumas músicas não saem da nossa cabeça?</p>
+                <div class="card-meta">
+                  <span>Ontem</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Item 3 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Entrevista Exclusiva: DJ X</h3>
+                <p>O produtor fala sobre seu novo álbum experimental.</p>
+                <div class="card-meta">
+                  <span>10 FEV</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+            <!-- Item 4 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Vinil vs Digital</h3>
+                <p>
+                  As vendas de discos físicos superam downloads pela primeira
+                  vez.
+                </p>
+                <div class="card-meta">
+                  <span>09 FEV</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+            <!-- Item 5 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1459749411177-0473ef7161cf?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Novos talentos do Jazz</h3>
+                <p>Uma lista com 5 artistas para ficar de olho este ano.</p>
+                <div class="card-meta">
+                  <span>08 FEV</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+            <!-- Item 6 -->
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1510915361408-d5965ce261f6?q=80&w=600&auto=format&fit=crop"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3>A volta do Pop Punk</h3>
+                <p>Como o estilo dos anos 2000 reconquistou a geração Z.</p>
+                <div class="card-meta">
+                  <span>05 FEV</span>
+                  <span>Ler Mais</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Paginação -->
+          <div class="pagination-wrapper">
+            <button class="page-btn"><i data-lucide="chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (Mesmo do index) -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo-footer">
+              <img src="./assets/logo-revista-histeria_31.png" alt="" />
+            </div>
+            <p>Seu espaço de conteúdo semanal sobre a cultura pop.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="./musica.html" class="nav-item">Musica</a></li>
+              <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+              <li>
+                <a href="./literatura.html" class="nav-item">Literatura</a>
+              </li>
+              <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+
+              <li>
+                <a href="./eventos.html" class="nav-item">Eventos</a>
+              </li>
+              <li>
+                <a href="./colunas.html" class="nav-item">Colunas</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <!-- ... resto do footer ... -->
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+              <a href="#"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Sua Revista Pop.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Ativar ícones novos
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

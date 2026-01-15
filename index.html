@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Revista Pop - Cultura Jovem e Dinâmica</title>
+
+    <!-- Lucide Icons (Script para ícones SVG) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Permanent+Marker&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./assets/logo-revista-histeria_33 cópia.png" alt="" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links">
+          <li><a href="./musica.html" class="nav-item">Musica</a></li>
+          <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+          <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
+          <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+
+          <!-- Dropdown -->
+          <li class="dropdown-wrapper">
+            <button class="nav-item dropdown-btn">
+              Mais <i data-lucide="chevron-down" class="icon-sm"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a href="./eventos.html">Eventos</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="./musica.html" class="nav-item">Musica</a>
+        <a href="./cinema.html" class="nav-item">Cinema/TV</a>
+        <a href="./literatura.html" class="nav-item">Literatura</a>
+        <a href="./teatro.html" class="nav-item">Teatro</a>
+        <a href="./eventos.html">Eventos</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO CAROUSEL -->
+      <section class="hero-carousel" id="hero-carousel">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-slide active"
+          style="
+            background-image: url(./assets/lady-gaga-rihanna-taylor-swift-divas-pop-montagem-apimages.jpg);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <span class="badge badge-pink">MÚSICA</span>
+            <h2>ADIPISTING ELIT SED DO EIUSMOD TEMPOR</h2>
+            <a href="#" class="btn btn-pink">Explorar Reportagem</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-slide"
+          style="background-image: url(./assets/jordan-peele_binary_342729.png)"
+        >
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <span class="badge badge-pink">CINEMA/TV</span>
+            <h2>NOVO FILME DE FICÇÃO CIENTÍFICA PROMETE REVOLUCIONAR</h2>
+            <a href="#" class="btn btn-pink">Explorar Reportagem</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-slide"
+          style="background-image: url(./assets/moriva_lolla_ariel-martini.jpg)"
+        >
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <span class="badge badge-pink">EVENTOS</span>
+            <h2>INGRESSOS PARA O MAIOR FESTIVAL POP SE ESGOTAM</h2>
+            <a href="#" class="btn btn-pink">Explorar Reportagem</a>
+          </div>
+        </div>
+
+        <button id="prev-slide" class="carousel-ctrl prev">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button id="next-slide" class="carousel-ctrl next">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </section>
+
+      <!-- PRINCIPAIS NOTÍCIAS (NewsGrid) -->
+      <section class="news-section">
+        <!-- Background Effects -->
+        <div class="bg-dots"></div>
+        <div class="bg-blur blur-pink"></div>
+        <div class="bg-blur blur-blue"></div>
+
+        <div class="content-wrapper container">
+          <div class="section-header">
+            <h2 class="title-lg">
+              Principais <br />
+              <span class="text-brown">Notícias</span>
+              <span class="underline-deco"></span>
+            </h2>
+          </div>
+
+          <div class="news-grid-layout">
+            <!-- Feature (Destaque Principal) -->
+            <a href="#" class="main-feature-card">
+              <div class="feature-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop"
+                  alt="Main"
+                />
+                <div class="image-overlay"></div>
+                <div class="feature-text">
+                  <span class="badge badge-sm badge-pink">Destaque</span>
+                  <h3>Festival Pop 2025: Tudo o que você precisa saber</h3>
+                  <p class="read-more">
+                    Ler reportagem completa
+                    <i data-lucide="arrow-right" class="icon-inline"></i>
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Sidebar (Lista lateral) -->
+            <div class="sidebar-news">
+              <!-- Card 1 -->
+              <a href="#" class="side-card">
+                <div class="side-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=600&auto=format&fit=crop"
+                    alt="thumb"
+                  />
+                </div>
+                <div class="side-content">
+                  <p class="tag-mini text-pink">Música</p>
+                  <h4>ULLAMCO LABORIS NISI UT ALIQUIP</h4>
+                  <div class="meta"><span>3 min leitura</span></div>
+                </div>
+              </a>
+              <!-- Card 2 -->
+              <a href="#" class="side-card">
+                <div class="side-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=600&auto=format&fit=crop"
+                    alt="thumb"
+                  />
+                </div>
+                <div class="side-content">
+                  <p class="tag-mini text-pink">Música</p>
+                  <h4>DUIS AUTE IRURE DOLOR IN REPREHENDERIT</h4>
+                  <div class="meta"><span>3 min leitura</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIRO MUSICAL (MusicSection) -->
+      <section class="music-section">
+        <div class="bg-wood"></div>
+
+        <div class="container relative z-10">
+          <div class="section-title-wrapper center">
+            <div class="pinned-title">
+              <div class="pin pin-red-dark"></div>
+              <h2><span class="text-light-brown">Músicas</span></h2>
+            </div>
+          </div>
+
+          <div class="music-grid">
+            <!-- Music Card 1 -->
+            <div class="music-card-wrapper rotate-pos">
+              <div class="pin pin-red"></div>
+              <div class="music-card">
+                <div class="music-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=1000&auto=format&fit=crop"
+                    alt="News"
+                  />
+                  <span class="img-tag">Lançamento</span>
+                </div>
+                <div class="music-content">
+                  <h3>Artista XYZ quebra recordes com novo álbum visual</h3>
+                  <p class="summary">
+                    O projeto conceitual atingiu 1 bilhão de streams em menos de
+                    24 horas.
+                  </p>
+                  <div class="card-footer">
+                    <div class="time">
+                      <i data-lucide="clock" class="icon-inline"></i> há 2 horas
+                    </div>
+                    <button class="btn-link">
+                      Ler
+                      <i data-lucide="arrow-up-right" class="icon-inline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Music Card 2 -->
+            <div class="music-card-wrapper rotate-neg">
+              <div class="pin pin-yellow"></div>
+              <div class="music-card">
+                <div class="music-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop"
+                    alt="News"
+                  />
+                  <span class="img-tag">Bastidores</span>
+                </div>
+                <div class="music-content">
+                  <h3>Produtor revela segredos do hit do verão</h3>
+                  <p class="summary">
+                    Entenda a teoria musical por trás da música que não sai da
+                    sua cabeça.
+                  </p>
+                  <div class="card-footer">
+                    <div class="time">
+                      <i data-lucide="clock" class="icon-inline"></i> há 2 horas
+                    </div>
+                    <button class="btn-link">
+                      Ler
+                      <i data-lucide="arrow-up-right" class="icon-inline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Music Card 3 -->
+            <div class="music-card-wrapper rotate-pos">
+              <div class="pin pin-blue"></div>
+              <div class="music-card">
+                <div class="music-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1000&auto=format&fit=crop"
+                    alt="News"
+                  />
+                  <span class="img-tag">Entrevista</span>
+                </div>
+                <div class="music-content">
+                  <h3>Banda Ícone fala sobre o fim da turnê</h3>
+                  <p class="summary">
+                    Em conversa exclusiva, vocalista comenta sobre os planos
+                    para o hiato.
+                  </p>
+                  <div class="card-footer">
+                    <div class="time">
+                      <i data-lucide="clock" class="icon-inline"></i> há 2 horas
+                    </div>
+                    <button class="btn-link">
+                      Ler
+                      <i data-lucide="arrow-up-right" class="icon-inline"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CINEMA & TV SECTION -->
+      <section class="cinema-section">
+        <div class="pattern-overlay"></div>
+        <div class="container relative z-10">
+          <div class="section-title-wrapper center">
+            <h2 class="title-lg text-white">
+              Cinema & <span class="text-stroke-pink">TV</span>
+            </h2>
+          </div>
+
+          <div class="cinema-grid">
+            <!-- Card 1 -->
+            <article class="movie-ticket rotate-neg-sm">
+              <div class="poster-box">
+                <img
+                  src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop"
+                  alt="Movie"
+                />
+                <div class="play-btn-overlay">
+                  <i data-lucide="play-circle"></i>
+                </div>
+              </div>
+              <div class="ticket-details">
+                <div class="ticket-header">
+                  <span class="genre-badge bg-blue">Sci-Fi</span>
+                  <span class="date">14 FEV</span>
+                </div>
+                <h3>O Mistério da Galáxia</h3>
+
+                <p class="ticket-desc">
+                  Uma análise profunda sobre os efeitos visuais que mudaram a
+                  indústria.
+                </p>
+                <a href="#" class="btn-ticket">Ler Crítica</a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="movie-ticket rotate-pos-sm z-up">
+              <div class="poster-box">
+                <img
+                  src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=600&auto=format&fit=crop"
+                  alt="Series"
+                />
+                <div class="play-btn-overlay">
+                  <i data-lucide="play-circle"></i>
+                </div>
+              </div>
+              <div class="ticket-details">
+                <div class="ticket-header">
+                  <span class="genre-badge bg-pink">Drama</span>
+                  <span class="date">12 FEV</span>
+                </div>
+                <h3>A Nova Temporada</h3>
+
+                <p class="ticket-desc">
+                  Por que todo mundo está falando sobre o final chocante do
+                  episódio 5?
+                </p>
+                <a href="#" class="btn-ticket">Ler Crítica</a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="movie-ticket rotate-neg-sm">
+              <div class="poster-box">
+                <img
+                  src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=600&auto=format&fit=crop"
+                  alt="Anime"
+                />
+                <div class="play-btn-overlay">
+                  <i data-lucide="play-circle"></i>
+                </div>
+              </div>
+              <div class="ticket-details">
+                <div class="ticket-header">
+                  <span class="genre-badge bg-lilac">Anime</span>
+                  <span class="date">10 FEV</span>
+                </div>
+                <h3>Retorno dos Clássicos</h3>
+
+                <p class="ticket-desc">
+                  O reboot que ninguém pediu, mas que estamos amando odiar.
+                </p>
+                <a href="#" class="btn-ticket">Ler Crítica</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM SECTION -->
+      <section class="team-section">
+        <div class="container">
+          <div class="about-intro">
+            <div class="intro-text">
+              <h1 class="headline-xl">
+                Sobre <span class="text-pink underline-thick">Nós</span>
+              </h1>
+              <div class="about-box">
+                <p>
+                  Histeria é uma revista que olha para a cultura pop com
+                  seriedade, afeto e senso crítico. Nascemos da vontade de dar
+                  profundidade a um universo que, por muito tempo, foi tratado
+                  como menor — especialmente quando associado ao público
+                  feminino. Falamos de filmes, séries, livros, música e
+                  fenômenos culturais que moldaram gerações, a partir de um
+                  olhar maduro, sensível e apaixonado. Acreditamos que a cultura
+                  pop é um espelho social poderoso e que, quando analisada com
+                  atenção, revela comportamentos, afetos e narrativas essenciais
+                  para entender o mundo contemporâneo. A Histeria ocupa um
+                  espaço ainda pouco explorado no Brasil: o de um veículo que
+                  leva o pop a sério, sem ironia ou condescendência. Aqui,
+                  gostar não é vergonha. Mais do que uma revista, somos um
+                  espaço de troca, identificação e comunidade — onde diferentes
+                  vozes podem se reconhecer, debater e celebrar aquilo que
+                  sempre amaram.
+                </p>
+              </div>
+            </div>
+            <div class="intro-image">
+              <div class="image-bg"></div>
+              <div class="image-frame">
+                <img
+                  src="./assets/time histeria (foto com efeito).jpg"
+                  alt="Equipe"
+                />
+                <div class="est-badge"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-grid">
+            <!-- Card 1 -->
+            <div class="id-card pink rotate-neg">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">Editor</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/flávia.jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Flávia Paiva</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val"
+                        >Comunicação com habilitação em cinema</span
+                      >
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">18/12/2002 </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Sagitário</span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic">Mary Poppins</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-pink">Flávia</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="id-card lilac rotate-pos">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">Editor</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/victoria (foto com efeito).jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Victoria R. Neves</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val"
+                        >Comunicação com Habilitação em Cinema</span
+                      >
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Peixes</span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">15/03/2001 </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic">Mamma Mia!</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-lilac">Victoria</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="id-card blue rotate-neg-lg">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">EDITOR</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/rayane (foto com efeito).jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Rayane Lima</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val">Jornalismo / Cinema</span>
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Libra</span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">11/10/1998 </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic"
+                          >Cartas para Julieta</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-blue">Rayane</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRENDS -->
+      <section class="trends-section">
+        <div class="container">
+          <header class="trends-header">
+            <h2 class="title-lg">Pop! Trends</h2>
+            <div class="hashtag-pill">
+              <span>#ViraisDaSemana</span>
+            </div>
+          </header>
+
+          <div class="trends-grid">
+            <!-- Trend 1 -->
+            <article class="trend-card shadow-pink">
+              <div class="trend-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1596704017254-9b1b184d3472?q=80&w=600&auto=format&fit=crop"
+                />
+              </div>
+              <div class="trend-content">
+                <span class="trend-badge bg-pink">Beauty</span>
+                <h3>O truque de batom que está quebrando a internet hoje.</h3>
+                <div class="trend-footer">
+                  <span>3 min leitura</span>
+                  <div class="go-btn">➜</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trend 2 -->
+            <article class="trend-card shadow-lilac">
+              <div class="trend-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+                />
+              </div>
+              <div class="trend-content">
+                <span class="trend-badge bg-lilac">Astro</span>
+                <h3>Ranking dos signos mais sortudos este mês.</h3>
+                <div class="trend-footer">
+                  <span>5 min leitura</span>
+                  <div class="go-btn">➜</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Trend 3 -->
+            <article class="trend-card shadow-blue">
+              <div class="trend-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1544367563-12123d895951?q=80&w=600&auto=format&fit=crop"
+                />
+              </div>
+              <div class="trend-content">
+                <span class="trend-badge bg-blue text-dark">Life</span>
+                <h3>Apps de organização que parecem jogos.</h3>
+                <div class="trend-footer">
+                  <span>4 min leitura</span>
+                  <div class="go-btn">➜</div>
+                </div>
+              </div>
+            </article>
+            <!-- Trend 4 -->
+            <article class="trend-card shadow-peach">
+              <div class="trend-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop"
+                />
+              </div>
+              <div class="trend-content">
+                <span class="trend-badge bg-peach text-dark">Style</span>
+                <h3>5 Peças chave para um guarda-roupa inteligente.</h3>
+                <div class="trend-footer">
+                  <span>6 min leitura</span>
+                  <div class="go-btn">➜</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLUBE DO LIVRO (LiteratureSection) -->
+      <section class="literature-section">
+        <div class="bg-lines"></div>
+        <div class="margin-line"></div>
+
+        <div class="container literature-container">
+          <div class="section-title-icon">
+            <div class="icon-box">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="text-group">
+              <h2 class="title-lg">
+                <span class="text-pink">Literatura</span>
+              </h2>
+              <p class="subtitle-mono">Resenhas & Recomendações</p>
+            </div>
+          </div>
+
+          <div class="books-grid">
+            <!-- Book 1 -->
+            <article class="book-card">
+              <div class="book-header">
+                <div class="book-cover">
+                  <img
+                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600&auto=format&fit=crop"
+                  />
+                </div>
+                <div class="book-meta">
+                  <span class="genre-tag">Distopia</span>
+                  <h3>1984</h3>
+                  <p class="author">George Orwell</p>
+                </div>
+              </div>
+              <div class="book-body">
+                <p class="excerpt">
+                  "Absolutamente aterrorizante e atual. Uma leitura obrigatória
+                  para entender os tempos modernos."
+                </p>
+              </div>
+              <button class="btn-outline-block">
+                Ler Resenha Completa
+                <i data-lucide="arrow-right" class="icon-sm"></i>
+              </button>
+            </article>
+
+            <!-- Book 2 -->
+            <article class="book-card">
+              <div class="book-header">
+                <div class="book-cover">
+                  <img
+                    src="https://images.unsplash.com/photo-1621351183012-e2f997203889?q=80&w=600&auto=format&fit=crop"
+                  />
+                </div>
+                <div class="book-meta">
+                  <span class="genre-tag">Fantasia</span>
+                  <h3>O Hobbit</h3>
+                  <p class="author">J.R.R. Tolkien</p>
+                </div>
+              </div>
+              <div class="book-body">
+                <p class="excerpt">
+                  "A melhor porta de entrada para o universo de Tolkien. Leve,
+                  divertido e épico."
+                </p>
+              </div>
+              <button class="btn-outline-block">
+                Ler Resenha Completa
+                <i data-lucide="arrow-right" class="icon-sm"></i>
+              </button>
+            </article>
+
+            <!-- Book 3 -->
+            <article class="book-card">
+              <div class="book-header">
+                <div class="book-cover">
+                  <img
+                    src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=600&auto=format&fit=crop"
+                  />
+                </div>
+                <div class="book-meta">
+                  <span class="genre-tag">Sci-Fi</span>
+                  <h3>Duna</h3>
+                  <p class="author">Frank Herbert</p>
+                </div>
+              </div>
+              <div class="book-body">
+                <p class="excerpt">
+                  "Uma obra prima complexa que mistura política, religião e
+                  ecologia em um universo vasto."
+                </p>
+              </div>
+              <button class="btn-outline-block">
+                Ler Resenha Completa
+                <i data-lucide="arrow-right" class="icon-sm"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter-section">
+        <div class="bg-wood"></div>
+        <div class="container relative z-10">
+          <div class="paper-note">
+            <div class="tape-top"></div>
+            <div class="note-content">
+              <h2 class="marker-font text-brown">
+                Não Perca Nada, <span class="text-pink">Assine!</span>
+              </h2>
+              <p class="subtitle-bold">
+                Receba as notícias mais quentes da cultura pop diretamente na
+                sua caixa de entrada.
+              </p>
+              <form class="newsletter-form">
+                <input
+                  type="email"
+                  placeholder="Digite seu melhor e-mail pop aqui..."
+                  required
+                />
+                <button type="submit">
+                  Receber <i data-lucide="mail" class="icon-sm"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTAGRAM FEED -->
+      <section class="insta-section">
+        <div class="container">
+          <div class="section-title-wrapper center">
+            <h2 class="title-md">
+              Siga a <span class="text-pink"> Revista Histeria</span> no
+              Instagram!
+            </h2>
+          </div>
+          <div class="slider-wrapper">
+            <button id="scroll-left" class="nav-btn left">
+              <i data-lucide="chevron-left"></i>
+            </button>
+
+            <div id="insta-scroll-container" class="insta-grid">
+              <!-- Posts -->
+              <div class="insta-card">
+                <img src="./assets/insta teste/a.png" alt="" />
+                <div class="overlay-grad">
+                  <p class="tag">
+                    #Música | Os 5 álbuns que definiram a década!
+                  </p>
+                  <a href="#" class="link">Ver post completo</a>
+                </div>
+              </div>
+              <div class="insta-card">
+                <img src="./assets/insta teste/b.png" alt="" />
+                <div class="overlay-grad">
+                  <p class="tag">#Cinema | Crítica: O novo filme de ficção.</p>
+                  <a href="#" class="link">Ver post completo</a>
+                </div>
+              </div>
+              <div class="insta-card">
+                <img src="./assets/insta teste/c.png" alt="" />
+                <div class="overlay-grad">
+                  <p class="tag">
+                    #Literatura | 3 livros que todo fã PRECISA ler.
+                  </p>
+                  <a href="#" class="link">Ver post completo</a>
+                </div>
+              </div>
+              <div class="insta-card">
+                <img src="./assets/insta teste/d.png" alt="" />
+                <div class="overlay-grad">
+                  <p class="tag">#Eventos | Cobertura exclusiva do show!</p>
+                  <a href="#" class="link">Ver post completo</a>
+                </div>
+              </div>
+              <div class="insta-card">
+                <img src="./assets/insta teste/e.png" alt="" />
+                <div class="overlay-grad">
+                  <p class="tag">#Teatro | Dica cultural da semana.</p>
+                  <a href="#" class="link">Ver post completo</a>
+                </div>
+              </div>
+            </div>
+
+            <button id="scroll-right" class="nav-btn right">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo-footer">
+              <img src="./assets/logo-revista-histeria_31.png" alt="" />
+            </div>
+            <p>Seu espaço de conteúdo semanal sobre a cultura pop.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="./musica.html" class="nav-item">Musica</a></li>
+              <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+              <li>
+                <a href="./literatura.html" class="nav-item">Literatura</a>
+              </li>
+              <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Editorias</h4>
+            <ul>
+              <li>
+                <a href="./eventos.html" class="nav-item">Eventos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i data-lucide="facebook"></i></a>
+              <a href="#"><i data-lucide="twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Sua Revista Pop. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

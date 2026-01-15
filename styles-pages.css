@@ -1,0 +1,644 @@
+/* --- ESTILOS GERAIS DAS PÁGINAS INTERNAS --- */
+
+/* Variáveis de Tema (Exemplo Padrão: Música/Pink) */
+:root {
+  --page-accent: var(--color-pink);
+  --page-bg: var(--color-bg);
+  --page-shadow: 8px 8px 0px 0px var(--color-pink);
+}
+
+/* Classes para trocar o tema facilmente no HTML */
+.theme-music {
+  --page-accent: var(--color-pink);
+  --page-bg: #fff6ce;
+  --page-shadow: 8px 8px 0px 0px var(--color-pink);
+}
+.theme-cinema {
+  --page-accent: var(--color-blue);
+  --page-bg: #7c5133;
+  --page-text: #fff;
+  --page-shadow: 8px 8px 0px 0px var(--color-blue);
+}
+.theme-lit {
+  --page-accent: var(--color-pink);
+  --page-bg: #fdfbf7;
+  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+}
+.theme-teatro {
+  --page-accent: #ffe36c;
+  --page-bg: #af7c51;
+  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+}
+
+.theme-event {
+  --page-accent: #fdfbf7;
+  --page-bg: #47cce2;
+  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+}
+
+.theme-colunas {
+  --page-accent: #a78bfa; /* Roxo suave */
+  --page-bg: #ffffff; /* Branco para destacar a textura */
+  --page-shadow: 8px 8px 0px 0px #7c3aed; /* Sombra Roxo Sólido */
+}
+
+/* Adicione outros temas conforme necessário */
+
+/* --- HEADER DA CATEGORIA --- */
+
+.category-header {
+  padding: 80px 0;
+  border-bottom: 4px solid #000;
+  background-color: var(--page-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-cinema .category-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.cat-header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.bg-noticias {
+  background-color: #f8f0ce;
+}
+
+.cat-icon-box {
+  padding: 20px;
+  border: 4px solid #000;
+  background-color: var(--page-accent);
+  box-shadow: 4px 4px 0px 0px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.cat-icon-box i {
+  width: 40px;
+  height: 40px;
+}
+
+.cat-title h1 {
+  font-family: var(--font-display); /* Lemon Milk */
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.cat-title h3 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Texto decorativo gigante no fundo */
+.bg-text-deco {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-family: var(--font-display);
+  font-size: 10rem;
+  font-weight: 900;
+  opacity: 0.05;
+  pointer-events: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- GRID DE NOTÍCIAS (CATEGORIA) --- */
+.category-content {
+  padding: 60px 0;
+  background-color: var(--page-bg);
+}
+
+.text-cine {
+  display: flex;
+  font-size: 4rem;
+  color: #fff;
+  gap: 10px;
+}
+
+.text-stroke-cine {
+  -webkit-text-stroke: 2px var(--color-blue);
+  color: transparent;
+
+  display: inline-block;
+}
+
+.margin-line-lit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100px;
+  width: 1px;
+  background-color: rgba(252, 165, 165, 0.5);
+  border-right: 1px solid rgba(252, 165, 165, 0.3);
+  pointer-events: none;
+  height: 1891px;
+}
+
+#teatro {
+  background-color: var(--page-bg);
+  /* Harlequin / Diamond Pattern for a classic Theater feel */
+  background-image: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.08) 25%,
+      transparent 25%
+    ),
+    linear-gradient(225deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%);
+  background-position: 25px 0, 25px 0, 0 0, 0 0;
+  background-size: 50px 50px;
+  background-repeat: repeat;
+  /* Subtle vignette for stage lighting effect */
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.25);
+}
+
+#literatura {
+  background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 100% 2rem;
+
+  pointer-events: none;
+}
+#cinema {
+  background-image: url(https://www.transparenttextures.com/patterns/cubes.png);
+}
+#music {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: #fff; /* Bright Base */
+
+  /* Layered Background: Grid + Pop Icons */
+  background-image: 
+      /* Icons layer */ url(./assets/icone-revista-histeria_8.png),
+    url(./assets/icone-revista-histeria_7.png),
+    url(./assets/icone-revista-histeria_11.png),
+    /* Grid layer */
+      linear-gradient(rgba(77, 208, 225, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 208, 225, 0.2) 1px, transparent 1px);
+
+  background-position: 10% 20%, 90% 15%, 5% 85%, /* Icons positions */ 0 0, 0 0; /* Grid positions */
+
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+  background-size: 150px, 250px, 180px, /* Icons sizes */ 30px 30px, 30px 30px; /* Grid size */
+
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+#eventos {
+  background-color: var(--page-bg);
+  /* Modern 'Plus Sign' Pattern for Events */
+  background-image: linear-gradient(
+      90deg,
+      transparent 46%,
+      rgba(255, 255, 255, 0.35) 46%,
+      rgba(255, 255, 255, 0.35) 54%,
+      transparent 54%
+    ),
+    linear-gradient(
+      transparent 46%,
+      rgba(255, 255, 255, 0.35) 46%,
+      rgba(255, 255, 255, 0.35) 54%,
+      transparent 54%
+    );
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+#colunas {
+  background-color: var(--page-bg);
+  /* Estilo Minimalista: Pontilhismo (Polka Dots) Sutil */
+  /* Um padrão de pontos levemente espaçados para um visual editorial limpo e moderno */
+  background-image: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.25) 3px,
+    /* Ponto Roxo Pastel */ transparent 3.5px
+  );
+  background-size: 40px 40px; /* Espaçamento generoso */
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Card Destaque (Largo) */
+.featured-article {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  background: #fff;
+  border: 3px solid #000;
+  margin-bottom: 60px;
+  box-shadow: var(--page-shadow);
+  transition: transform 0.3s;
+  cursor: pointer;
+  color: #333;
+}
+
+.featured-article:hover {
+  transform: translateY(-5px);
+}
+
+.feat-img {
+  position: relative;
+  border-right: 3px solid #000;
+  overflow: hidden;
+  height: 450px;
+}
+
+.feat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.featured-article:hover .feat-img img {
+  transform: scale(1.05);
+}
+
+.badge-float {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--page-accent);
+  color: #000;
+  padding: 5px 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+.feat-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feat-info h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.feat-info p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-left: 4px solid #000;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-read {
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Grid Menor */
+.news-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.news-card-simple {
+  background: #fff;
+  border: 2px solid #000;
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  box-shadow: 6px 6px 0px var(--color-brown);
+}
+
+.theme-music .news-card-simple {
+  box-shadow: 6px 6px 0px var(--color-pink);
+}
+.theme-cinema .news-card-simple {
+  box-shadow: 6px 6px 0px var(--color-blue);
+}
+.theme-lit .news-card-simple {
+  box-shadow: 6px 6px 0px var(--color-brown);
+}
+
+.theme-teatro .news-card-simple {
+  box-shadow: 6px 6px 0px var(--color-brown);
+}
+
+.theme-event .news-card-simple {
+  box-shadow: 6px 6px 0px var(--color-brown);
+}
+
+.theme-colunas .news-card-simple {
+  box-shadow: 6px 6px 0px #7c3aed;
+}
+
+.news-card-simple:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-box {
+  height: 220px;
+  border-bottom: 2px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.news-card-simple:hover .card-img-box img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.card-meta {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px dashed #ccc;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* --- PAGINAÇÃO --- */
+.pagination-wrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #000;
+  background: #fff;
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.page-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* --- PÁGINA DA NOTÍCIA (SINGLE) --- */
+.article-nav-bar {
+  position: sticky;
+  top: 80px; /* Abaixo do navbar principal */
+  background: #fff;
+  border-bottom: 2px solid #000;
+  padding: 10px 0;
+  z-index: 90;
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.article-hero {
+  height: 500px;
+  position: relative;
+  background: #000;
+}
+
+.article-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: #fff;
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 0px #000;
+}
+
+.article-meta {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 15px;
+}
+
+.article-body-container {
+  background: #fff;
+  border: 2px solid #000;
+  border-top: none;
+  padding: 60px;
+  margin-top: -50px; /* Sobrepor o hero */
+  position: relative;
+  z-index: 10;
+  box-shadow: 10px 10px 0px #000;
+  margin-bottom: 80px;
+  max-width: 900px; /* Leitura mais confortável */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-body p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.article-lead {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #555;
+  border-left: 5px solid var(--color-pink);
+  padding-left: 20px;
+}
+
+.article-quote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 40px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-left: 5px solid #000;
+}
+
+/* Responsivo para as novas páginas */
+@media (max-width: 900px) {
+  .featured-article {
+    grid-template-columns: 1fr;
+  }
+  .feat-img {
+    border-right: none;
+    border-bottom: 3px solid #000;
+    height: 300px;
+  }
+  .news-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .cat-title h1 {
+    font-size: 2.5rem;
+  }
+  .article-title {
+    font-size: 2rem;
+  }
+  .article-body-container {
+    padding: 30px;
+    margin-top: 0;
+    box-shadow: 5px 5px 0px #000;
+  }
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE PARA PÁGINAS INTERNAS --- */
+@media (max-width: 768px) {
+  /* Cabeçalho das Editorias */
+  .cat-header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .cat-title h1 {
+    font-size: 2.5rem;
+  }
+  .text-cine {
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+
+  /* Artigo em Destaque (Internas) */
+  .featured-article {
+    grid-template-columns: 1fr;
+    margin: 0 15px 40px 15px;
+  }
+  .feat-img {
+    border-right: none;
+    border-bottom: 3px solid #000;
+    height: 250px;
+  }
+  .feat-info h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Grid de Notícias Simples */
+  .news-grid-3 {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  /* Página da Notícia (Single) */
+  .article-title {
+    font-size: 2.2rem;
+    padding: 0 15px;
+  }
+  .article-hero {
+    height: 350px;
+  }
+  .article-body-container {
+    margin-top: 0;
+    width: 95%;
+    padding: 25px;
+    box-shadow: 6px 6px 0px #000;
+  }
+  .article-quote {
+    font-size: 1.3rem;
+  }
+
+  /* Esconder linhas decorativas que cortam o texto no mobile */
+  .margin-line-lit,
+  .margin-line {
+    display: none;
+  }
+}

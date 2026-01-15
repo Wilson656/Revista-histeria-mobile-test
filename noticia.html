@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Título da Notícia - Revista Histeria</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles-pages.css" />
+  </head>
+  <body>
+    <!-- Navbar (Padrão) -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/logo-revista-histeria_33 cópia.png" alt="" />
+          </a>
+        </div>
+        <!-- Menu Simplificado para Mobile -->
+        <button id="mobile-menu-btn" class="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Barra de Navegação Interna -->
+    <div class="article-nav-bar">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <a href="musica.html" class="nav-back">
+          <i data-lucide="chevron-left"></i> Voltar para Home.
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero da Notícia -->
+      <section class="article-hero">
+        <img
+          src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1000&auto=format&fit=crop"
+          alt="Capa"
+        />
+        <div class="hero-content">
+          <div class="container" style="max-width: 900px">
+            <span class="badge badge-pink" style="margin-bottom: 15px"
+              >Música</span
+            >
+            <h1 class="article-title">
+              O Retorno Triunfal das Bandas de Garagem
+            </h1>
+            <div class="article-meta">
+              <span>Por <strong>Flávia Paiva</strong></span>
+              <span>•</span>
+              <span>12 Fev, 2025</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Corpo do Texto -->
+      <section class="bg-noticias">
+        <article class="container article-body-container">
+          <div class="article-body">
+            <p class="article-lead">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+              unde omnis iste natus error sit voluptatem accusantium doloremque
+              laudantium.
+            </p>
+
+            <blockquote class="article-quote">
+              "A cultura pop é um espelho social poderoso e que, quando
+              analisada com atenção, revela comportamentos essenciais."
+            </blockquote>
+
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+              ipsum quia dolor sit amet.
+            </p>
+
+            <h3>Uma nova perspectiva</h3>
+            <p>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam
+              corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+              consequatur? Quis autem vel eum iure reprehenderit qui in ea
+              voluptate velit esse quam nihil molestiae consequatur.
+            </p>
+          </div>
+
+          <!-- Tags -->
+          <div
+            style="
+              margin-top: 40px;
+              padding-top: 20px;
+              border-top: 1px dashed #ccc;
+            "
+          >
+            <span
+              class="tag-mini text-pink"
+              style="
+                background: #f0f0f0;
+                color: #555;
+                border: none;
+                cursor: pointer;
+              "
+              >#Rock</span
+            >
+            <span
+              class="tag-mini text-pink"
+              style="
+                background: #f0f0f0;
+                color: #555;
+                border: none;
+                cursor: pointer;
+              "
+              >#Indie</span
+            >
+            <span
+              class="tag-mini text-pink"
+              style="
+                background: #f0f0f0;
+                color: #555;
+                border: none;
+                cursor: pointer;
+              "
+              >#Entrevista</span
+            >
+          </div>
+        </article>
+      </section>
+
+      <!-- Leia Também -->
+      <section style="background-color: var(--color-bg); padding-bottom: 80px">
+        <div class="container" style="max-width: 900px">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 2rem;
+              margin-bottom: 30px;
+              text-transform: uppercase;
+            "
+          >
+            Leia Também
+          </h3>
+          <div class="news-grid-3">
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box" style="height: 150px">
+                <img
+                  src="https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=600"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3 style="font-size: 1rem">Outra Notícia Interessante</h3>
+              </div>
+            </article>
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box" style="height: 150px">
+                <img
+                  src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=600"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3 style="font-size: 1rem">Curiosidade do dia</h3>
+              </div>
+            </article>
+            <article
+              class="news-card-simple"
+              onclick="window.location.href='noticia.html'"
+            >
+              <div class="card-img-box" style="height: 150px">
+                <img
+                  src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=600"
+                  alt="News"
+                />
+              </div>
+              <div class="card-body">
+                <h3 style="font-size: 1rem">Review do Álbum</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Igual -->
+    <footer>
+      <div class="container">
+        <p style="text-align: center; color: #777">
+          &copy; 2025 Revista Histeria
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
