@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -12,6 +12,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
     <link rel="stylesheet" href="styles-pages.css" />
@@ -27,13 +31,13 @@
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="./musica.html" class="nav-item">Musica</a></li>
+          <li><a href="./musica.html" class="nav-item">Música</a></li>
           <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
           <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
           <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
           <li class="dropdown-wrapper">
             <button class="nav-item dropdown-btn">
-              Editorias <i data-lucide="chevron-down" class="icon-sm"></i>
+              Mais <i data-lucide="chevron-down" class="icon-sm"></i>
             </button>
             <div class="dropdown-menu">
               <a href="./eventos.html">Eventos</a>
@@ -46,12 +50,11 @@
         </button>
       </div>
       <div id="mobile-menu" class="mobile-menu hidden">
-        <a href="./musica.html" class="nav-item">Musica</a>
+        <a href="./musica.html" class="nav-item">Música</a>
         <a href="./cinema.html" class="nav-item">Cinema/TV</a>
         <a href="./literatura.html" class="nav-item">Literatura</a>
         <a href="./teatro.html" class="nav-item">Teatro</a>
         <a href="./eventos.html">Eventos</a>
-        <a href="./colunas.html">Colunas</a>
       </div>
     </nav>
 
@@ -78,7 +81,7 @@
           <!-- Notícia Destaque -->
           <article
             class="featured-article"
-            onclick="window.location.href='noticia.html'"
+            onclick="window.location.href = 'noticia.html'"
           >
             <div class="feat-img">
               <img
@@ -107,7 +110,7 @@
             <!-- Item 1 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -130,7 +133,7 @@
             <!-- Item 2 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -151,7 +154,7 @@
             <!-- Item 3 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -171,7 +174,7 @@
             <!-- Item 4 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -194,7 +197,7 @@
             <!-- Item 5 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -214,7 +217,7 @@
             <!-- Item 6 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -261,7 +264,7 @@
           <div class="footer-col">
             <h4>Navegação</h4>
             <ul>
-              <li><a href="./musica.html" class="nav-item">Musica</a></li>
+              <li><a href="./musica.html" class="nav-item">Música</a></li>
               <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
               <li>
                 <a href="./literatura.html" class="nav-item">Literatura</a>
@@ -280,7 +283,8 @@
             <!-- ... resto do footer ... -->
             <h4>Siga-nos</h4>
             <div class="social-icons">
-              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
           </div>
         </div>

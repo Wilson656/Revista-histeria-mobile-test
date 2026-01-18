@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sua Revista Pop - Cultura Jovem e Dinâmica</title>
+    <title>Revista Histeria</title>
 
     <!-- Lucide Icons (Script para ícones SVG) -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -28,6 +28,10 @@
         }
       }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -40,7 +44,7 @@
 
         <!-- Desktop Menu -->
         <ul class="nav-links">
-          <li><a href="./musica.html" class="nav-item">Musica</a></li>
+          <li><a href="./musica.html" class="nav-item">Música</a></li>
           <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
           <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
           <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
@@ -48,10 +52,12 @@
           <!-- Dropdown -->
           <li class="dropdown-wrapper">
             <button class="nav-item dropdown-btn">
-              Mais <i data-lucide="chevron-down" class="icon-sm"></i>
+              Mais
+              <i data-lucide="chevron-down" class="icon-sm"></i>
             </button>
             <div class="dropdown-menu">
               <a href="./eventos.html">Eventos</a>
+              <a href="#team-section">Sobre nós</a>
             </div>
           </li>
         </ul>
@@ -64,7 +70,7 @@
 
       <!-- Mobile Menu Panel -->
       <div id="mobile-menu" class="mobile-menu hidden">
-        <a href="./musica.html" class="nav-item">Musica</a>
+        <a href="./musica.html" class="nav-item">Música</a>
         <a href="./cinema.html" class="nav-item">Cinema/TV</a>
         <a href="./literatura.html" class="nav-item">Literatura</a>
         <a href="./teatro.html" class="nav-item">Teatro</a>
@@ -195,7 +201,9 @@
         </div>
       </section>
 
-      <!-- GIRO MUSICAL (MusicSection) -->
+      <!-- GIRO 
+       
+      L (MusicSection) -->
       <section class="music-section">
         <div class="bg-wood"></div>
 
@@ -393,7 +401,7 @@
       </section>
 
       <!-- TEAM SECTION -->
-      <section class="team-section">
+      <section class="team-section" id="team-section">
         <div class="container">
           <div class="about-intro">
             <div class="intro-text">
@@ -425,7 +433,7 @@
               <div class="image-bg"></div>
               <div class="image-frame">
                 <img
-                  src="./assets/time histeria (foto com efeito).jpg"
+                  src="./assets/time histeria foto com efeito.jpg"
                   alt="Equipe"
                 />
                 <div class="est-badge"></div>
@@ -469,6 +477,19 @@
                         ><span class="detail-val">Sagitário</span>
                       </div>
                       <div>
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val"
+                          >Taylor Swift, Michael Jackson e BIGBANG</span
+                        >
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val"
+                          >A Inexplicável Lógica da Minha Vida
+                        </span>
+                      </div>
+
+                      <div>
                         <span class="label-gray">Filme</span
                         ><span class="detail-val italic">Mary Poppins</span>
                       </div>
@@ -509,10 +530,20 @@
                         <span class="label-gray">Signo</span
                         ><span class="detail-val">Peixes</span>
                       </div>
+
                       <div>
                         <span class="label-gray">Nasc.</span
                         ><span class="detail-val">15/03/2001 </span>
                       </div>
+                      <div>
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val">One Direction </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val">Anne de Green Gables </span>
+                      </div>
+
                       <div>
                         <span class="label-gray">Filme</span
                         ><span class="detail-val italic">Mamma Mia!</span>
@@ -556,6 +587,17 @@
                         <span class="label-gray">Nasc.</span
                         ><span class="detail-val">11/10/1998 </span>
                       </div>
+
+                      <div>
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val"
+                          >Taylor Swift, One Direction, BTS</span
+                        >
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val">As Irmãs Blue </span>
+                      </div>
                       <div>
                         <span class="label-gray">Filme</span
                         ><span class="detail-val italic"
@@ -576,10 +618,7 @@
       <section class="trends-section">
         <div class="container">
           <header class="trends-header">
-            <h2 class="title-lg">Pop! Trends</h2>
-            <div class="hashtag-pill">
-              <span>#ViraisDaSemana</span>
-            </div>
+            <h2 class="title-lg">Teatro</h2>
           </header>
 
           <div class="trends-grid">
@@ -591,7 +630,6 @@
                 />
               </div>
               <div class="trend-content">
-                <span class="trend-badge bg-pink">Beauty</span>
                 <h3>O truque de batom que está quebrando a internet hoje.</h3>
                 <div class="trend-footer">
                   <span>3 min leitura</span>
@@ -608,7 +646,6 @@
                 />
               </div>
               <div class="trend-content">
-                <span class="trend-badge bg-lilac">Astro</span>
                 <h3>Ranking dos signos mais sortudos este mês.</h3>
                 <div class="trend-footer">
                   <span>5 min leitura</span>
@@ -625,7 +662,6 @@
                 />
               </div>
               <div class="trend-content">
-                <span class="trend-badge bg-blue text-dark">Life</span>
                 <h3>Apps de organização que parecem jogos.</h3>
                 <div class="trend-footer">
                   <span>4 min leitura</span>
@@ -641,7 +677,6 @@
                 />
               </div>
               <div class="trend-content">
-                <span class="trend-badge bg-peach text-dark">Style</span>
                 <h3>5 Peças chave para um guarda-roupa inteligente.</h3>
                 <div class="trend-footer">
                   <span>6 min leitura</span>
@@ -860,28 +895,25 @@
           <div class="footer-col">
             <h4>Navegação</h4>
             <ul>
-              <li><a href="./musica.html" class="nav-item">Musica</a></li>
+              <li><a href="./musica.html" class="nav-item">Música</a></li>
               <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
               <li>
                 <a href="./literatura.html" class="nav-item">Literatura</a>
               </li>
               <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Editorias</h4>
-            <ul>
               <li>
                 <a href="./eventos.html" class="nav-item">Eventos</a>
               </li>
             </ul>
           </div>
           <div class="footer-col">
+            <ul></ul>
+          </div>
+          <div class="footer-col">
             <h4>Siga-nos</h4>
             <div class="social-icons">
-              <a href="#"><i data-lucide="instagram"></i></a>
-              <a href="#"><i data-lucide="facebook"></i></a>
-              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
           </div>
         </div>

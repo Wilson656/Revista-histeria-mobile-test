@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Música - Revista Histeria</title>
+    <title>Literatura - Revista Histeria</title>
 
     <!-- Scripts e Fontes (Mesmos do index) -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -16,6 +16,10 @@
 
     <link rel="stylesheet" href="styles-pages.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- NAVBAR (Igual ao index) -->
@@ -27,13 +31,13 @@
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="./musica.html" class="nav-item">Musica</a></li>
+          <li><a href="./musica.html" class="nav-item">Música</a></li>
           <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
           <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
           <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
           <li class="dropdown-wrapper">
             <button class="nav-item dropdown-btn">
-              Editorias <i data-lucide="chevron-down" class="icon-sm"></i>
+              Mais <i data-lucide="chevron-down" class="icon-sm"></i>
             </button>
             <div class="dropdown-menu">
               <a href="./eventos.html">Eventos</a>
@@ -45,7 +49,7 @@
         </button>
       </div>
       <div id="mobile-menu" class="mobile-menu hidden">
-        <a href="./musica.html" class="nav-item">Musica</a>
+        <a href="./musica.html" class="nav-item">Música</a>
         <a href="./cinema.html" class="nav-item">Cinema/TV</a>
         <a href="./literatura.html" class="nav-item">Literatura</a>
         <a href="./teatro.html" class="nav-item">Teatro</a>
@@ -78,7 +82,7 @@
           <!-- Notícia Destaque -->
           <article
             class="featured-article"
-            onclick="window.location.href='noticia.html'"
+            onclick="window.location.href = 'noticia.html'"
           >
             <div class="feat-img">
               <img
@@ -107,7 +111,7 @@
             <!-- Item 1 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -130,7 +134,7 @@
             <!-- Item 2 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -151,7 +155,7 @@
             <!-- Item 3 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -171,7 +175,7 @@
             <!-- Item 4 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -194,7 +198,7 @@
             <!-- Item 5 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -214,7 +218,7 @@
             <!-- Item 6 -->
             <article
               class="news-card-simple"
-              onclick="window.location.href='noticia.html'"
+              onclick="window.location.href = 'noticia.html'"
             >
               <div class="card-img-box">
                 <img
@@ -261,7 +265,7 @@
           <div class="footer-col">
             <h4>Navegação</h4>
             <ul>
-              <li><a href="./musica.html" class="nav-item">Musica</a></li>
+              <li><a href="./musica.html" class="nav-item">Música</a></li>
               <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
               <li>
                 <a href="./literatura.html" class="nav-item">Literatura</a>
@@ -277,7 +281,8 @@
             <!-- ... resto do footer ... -->
             <h4>Siga-nos</h4>
             <div class="social-icons">
-              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
           </div>
         </div>

@@ -49,9 +49,6 @@
   box-sizing: border-box;
 }
 
-p {
-}
-
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -94,6 +91,7 @@ img {
 }
 .text-light-brown {
   color: #4862aa;
+  font-size: 40px;
 }
 .hidden {
   display: none;
@@ -145,7 +143,7 @@ img {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   position: relative;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
 .nav-item:hover {
@@ -357,17 +355,28 @@ img {
 
   /* Layered Background: Grid + Pop Icons */
   background-image: 
-    /* Icons layer */ url(./assets/icone-revista-histeria_8.png),
+    /* Icons layer */
+    url(./assets/icone-revista-histeria_8.png),
     url(./assets/icone-revista-histeria_7.png),
     url(./assets/icone-revista-histeria_11.png),
     /* Grid layer */
-      linear-gradient(rgba(77, 208, 225, 0.2) 1px, transparent 1px),
+    linear-gradient(rgba(77, 208, 225, 0.2) 1px, transparent 1px),
     linear-gradient(90deg, rgba(77, 208, 225, 0.2) 1px, transparent 1px);
 
-  background-position: 10% 20%, 90% 15%, 5% 85%, /* Icons positions */ 0 0, 0 0; /* Grid positions */
+  background-position:
+    10% 20%,
+    90% 15%,
+    5% 85%,
+    /* Icons positions */ 0 0,
+    0 0; /* Grid positions */
 
   background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
-  background-size: 150px, 250px, 180px, /* Icons sizes */ 30px 30px, 30px 30px; /* Grid size */
+  background-size:
+    150px,
+    250px,
+    180px,
+    /* Icons sizes */ 30px 30px,
+    30px 30px; /* Grid size */
 
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
@@ -399,6 +408,11 @@ img {
   border: 2px solid #000;
   box-shadow: 4px 4px 0px var(--color-blue);
   transform: rotate(-1deg);
+  font-size: 40px;
+}
+
+.title-lg {
+  font-size: 40px;
 }
 
 .underline-deco {
@@ -419,7 +433,9 @@ img {
   border: 2px solid #000; /* Distinct border */
   /* Solid Color Shadow for Pop effect */
   box-shadow: 8px 8px 0px var(--color-pink);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   background: #fff;
 }
 
@@ -780,9 +796,9 @@ img {
 }
 .headline-xl {
   font-family: var(--font-display);
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: 900;
-  text-transform: uppercase;
+
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -845,11 +861,10 @@ img {
 }
 
 .image-frame img {
+  justify-content: center;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.image-frame:hover img {
 }
 
 .est-badge {
@@ -1443,6 +1458,7 @@ img {
 
   background-size: contain;
   background-repeat: no-repeat;
+  background-size: cover;
 
   position: relative;
   overflow: hidden;
@@ -1667,6 +1683,7 @@ footer {
 .social-icons {
   display: flex;
   gap: 15px;
+  font-size: 25px;
 }
 .social-icons a:hover {
   color: var(--color-pink);
@@ -1678,6 +1695,15 @@ footer {
   text-align: center;
   font-size: 0.75rem;
   color: #777;
+}
+
+@media (max-width: 1440px) {
+  .music-section {
+    background-image: url(./assets/bg-1440.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 /* --- RESPONSIVE --- */
@@ -2026,6 +2052,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .newsletter-section {
+    background-image: url(./assets/bg-news.png);
+  }
+  .music-section {
+    background-image: url(./assets/mobile\ bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .hero-carousel {
     height: 500px;
   }
@@ -2039,5 +2074,26 @@ footer {
   }
   .insta-card {
     min-width: 260px;
+  }
+
+  .image-bg {
+    display: none;
+  }
+  .image-frame {
+    height: auto;
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-section {
+    background-image: url(./assets/bg-news.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
