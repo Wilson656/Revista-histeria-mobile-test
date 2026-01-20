@@ -1,6 +1,6 @@
 /* --- ESTILOS GERAIS DAS PÁGINAS INTERNAS --- */
 
-/* Variáveis de Tema (Exemplo Padrão: Música/Pink) */
+/* Variáveis de Tema */
 :root {
   --page-accent: var(--color-pink);
   --page-bg: var(--color-bg);
@@ -20,34 +20,34 @@
   --page-shadow: 8px 8px 0px 0px var(--color-blue);
 }
 .theme-historia {
-  --page-accent: #ff6b6b; /* Vermelho Pastel/Vibrante */
-  --page-bg: #fff5f5; /* Fundo levemente rosado */
-  --page-shadow: 8px 8px 0px 0px #c92a2a; /* Sombra Vermelho Escuro */
+  --page-accent: #ff6b6b;
+  --page-bg: #fff5f5;
+  --page-shadow: 8px 8px 0px 0px #c92a2a;
 }
 .theme-lit {
-  --page-accent: var(--color-pink);
+  --page-accent: #af7c51;
   --page-bg: #fdfbf7;
-  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+  --page-shadow: 8px 8px 0px 0px #af7c51;
 }
 .theme-teatro {
   --page-accent: #ffe36c;
   --page-bg: #9199e2;
-  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+  --page-shadow: 8px 8px 0px 0px #ffe36c;
 }
 
+/* --- TEMA EVENTOS ATUALIZADO --- */
 .theme-event {
-  --page-accent: #fdfbf7;
-  --page-bg: #47cce2;
-  --page-shadow: 8px 8px 0px 0px var(--color-brown);
+  /* Cores mais claras para o tema de ondas */
+  --page-accent: #eeee; /* Azul céu suave para detalhes */
+  --page-bg: #e1f5fe; /* Azul muito clarinho para o fundo base */
+  --page-shadow: 8px 8px 0px 0px #eeee;
 }
 
 .theme-colunas {
-  --page-accent: #a78bfa; /* Roxo suave */
-  --page-bg: #ffffff; /* Branco para destacar a textura */
-  --page-shadow: 8px 8px 0px 0px #7c3aed; /* Sombra Roxo Sólido */
+  --page-accent: #a78bfa;
+  --page-bg: #ffffff;
+  --page-shadow: 8px 8px 0px 0px #7c3aed;
 }
-
-/* Adicione outros temas conforme necessário */
 
 /* --- HEADER DA CATEGORIA --- */
 
@@ -93,7 +93,7 @@
 }
 
 .cat-title h1 {
-  font-family: var(--font-display); /* Lemon Milk */
+  font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -144,7 +144,6 @@
 .text-stroke-cine {
   -webkit-text-stroke: 2px var(--color-blue);
   color: transparent;
-
   display: inline-block;
 }
 
@@ -160,6 +159,8 @@
   height: 1891px;
 }
 
+/* --- BACKGROUNDS ESPECÍFICOS --- */
+
 #teatro {
   background-color: #9199e2;
   background-image: radial-gradient(#4862aa 2px, transparent 2px);
@@ -171,9 +172,9 @@
 #literatura {
   background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
   background-size: 100% 2rem;
-
   pointer-events: none;
 }
+
 #about {
   padding: 80px 0;
   background-color: #fff;
@@ -185,11 +186,7 @@
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-
-  /* Cor de fundo base */
   background-color: #fff0f0;
-
-  /* Padrão de Listras Diagonais Estilo "Alerta/Histeria" */
   background-image: repeating-linear-gradient(
     90deg,
     #ffffff,
@@ -197,107 +194,89 @@
     #fff0f0 20px,
     #fff0f0 40px
   );
-
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
+
 #cinema {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-
   background-color: #fff;
-
-  /* --- CONTROLE DE TAMANHO --- */
-  /* Mude o valor abaixo (ex: 30px para menor, 100px para maior) */
   --tamanho-quadrado: 180px;
-
-  /* Cria o efeito de quadrados (mosaico) com 4 tons de rosa */
   background-image: conic-gradient(
     #ffcce6 90deg,
-    /* Rosa Claro */ #ff99cc 90deg 180deg,
-    /* Rosa Médio */ #ffb3da 180deg 270deg,
-    /* Rosa Suave */ #ff85c2 270deg /* Rosa Vibrante */
+    #ff99cc 90deg 180deg,
+    #ffb3da 180deg 270deg,
+    #ff85c24d 270deg
   );
-
-  /* Aplica o tamanho definido na variável acima */
   background-size: var(--tamanho-quadrado) var(--tamanho-quadrado);
-
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
+
 #music {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-
-  background-color: #fff; /* Bright Base */
-
-  /* Layered Background: Grid + Pop Icons */
-  background-image: 
-      /* Icons layer */
+  background-color: #fff;
+  background-image:
     url(./assets/icone-revista-histeria_8.png),
     url(./assets/icone-revista-histeria_7.png),
     url(./assets/icone-revista-histeria_11.png),
-    /* Grid layer */
     linear-gradient(rgba(77, 208, 225, 0.2) 1px, transparent 1px),
     linear-gradient(90deg, rgba(77, 208, 225, 0.2) 1px, transparent 1px);
-
   background-position:
     10% 20%,
     90% 15%,
     5% 85%,
-    /* Icons positions */ 0 0,
-    0 0; /* Grid positions */
-
+    0 0,
+    0 0;
   background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
   background-size:
     150px,
     250px,
     180px,
-    /* Icons sizes */ 30px 30px,
-    30px 30px; /* Grid size */
-
+    30px 30px,
+    30px 30px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 
+/* --- BACKGROUND DE ESTRELAS 5 PONTAS (EVENTOS) --- */
 #eventos {
-  background-color: var(--page-bg);
-  /* Modern 'Plus Sign' Pattern for Events */
-  background-image:
-    linear-gradient(
-      90deg,
-      transparent 46%,
-      rgba(255, 255, 255, 0.35) 46%,
-      rgba(255, 255, 255, 0.35) 54%,
-      transparent 54%
-    ),
-    linear-gradient(
-      transparent 46%,
-      rgba(255, 255, 255, 0.35) 46%,
-      rgba(255, 255, 255, 0.35) 54%,
-      transparent 54%
-    );
-  background-size: 40px 40px;
-  background-position: center center;
+  background-color: #8cceede6; /* Azul muito clarinho */
+
+  /* Padrão de Estrela de 5 Pontas com espaçamento embutido no SVG */
+  /* O viewBox 0 0 48 48 com o ícone centralizado (que tem aprox 24px) cria uma margem natural */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' width='48' height='48'%3E%3Cpath fill='%23ffffff' transform='translate(12,12)' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+
+  /* Tamanho total do "bloco" da estrela + espaço */
+  /* Aumentei para garantir que fiquem bem distribuídas */
+  background-size: 80px 80px;
+
+  background-position: center;
+
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 #colunas {
   background-color: var(--page-bg);
-  /* Estilo Minimalista: Pontilhismo (Polka Dots) Sutil */
-  /* Um padrão de pontos levemente espaçados para um visual editorial limpo e moderno */
   background-image: radial-gradient(
     circle,
     rgba(167, 139, 250, 0.25) 3px,
-    /* Ponto Roxo Pastel */ transparent 3.5px
+    transparent 3.5px
   );
-  background-size: 40px 40px; /* Espaçamento generoso */
+  background-size: 40px 40px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 
-/* Card Destaque (Largo) */
+/* --- CARDS --- */
+
 .featured-article {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -397,7 +376,7 @@
   display: flex;
   flex-direction: column;
   color: #333;
-  box-shadow: 6px 6px 0px var(--color-brown);
+  box-shadow: 6px 6px 0px #c92a2a;
 }
 
 .theme-music .news-card-simple {
@@ -407,22 +386,19 @@
   box-shadow: 6px 6px 0px var(--color-blue);
 }
 .theme-lit .news-card-simple {
-  box-shadow: 6px 6px 0px var(--color-brown);
+  box-shadow: 6px 6px 0px #af7c51;
 }
-
 .theme-teatro .news-card-simple {
-  box-shadow: 6px 6px 0px var(--color-brown);
+  box-shadow: 6px 6px 0px #ffe36c;
 }
-
 .theme-event .news-card-simple {
-  box-shadow: 6px 6px 0px var(--color-brown);
+  box-shadow: 6px 6px 0px #eeee; /* Sombra atualizada */
 }
-
 .theme-colunas .news-card-simple {
   box-shadow: 6px 6px 0px #7c3aed;
 }
 
-.news-card-simple:hover {
+.theme .news-card-simple:hover {
   transform: translateY(-5px);
 }
 
@@ -515,7 +491,7 @@
 /* --- PÁGINA DA NOTÍCIA (SINGLE) --- */
 .article-nav-bar {
   position: sticky;
-  top: 80px; /* Abaixo do navbar principal */
+  top: 80px;
   background: #fff;
   border-bottom: 2px solid #000;
   padding: 10px 0;
@@ -577,12 +553,12 @@
   border: 2px solid #000;
   border-top: none;
   padding: 60px;
-  margin-top: -50px; /* Sobrepor o hero */
+  margin-top: -50px;
   position: relative;
   z-index: 10;
   box-shadow: 10px 10px 0px #000;
   margin-bottom: 80px;
-  max-width: 900px; /* Leitura mais confortável */
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -643,7 +619,6 @@
 
 /* --- AJUSTES DE RESPONSIVIDADE PARA PÁGINAS INTERNAS --- */
 @media (max-width: 768px) {
-  /* Cabeçalho das Editorias */
   .cat-header-content {
     flex-direction: column;
     text-align: center;
@@ -657,7 +632,6 @@
     justify-content: center;
   }
 
-  /* Artigo em Destaque (Internas) */
   .featured-article {
     grid-template-columns: 1fr;
     margin: 0 15px 40px 15px;
@@ -671,13 +645,11 @@
     font-size: 1.8rem;
   }
 
-  /* Grid de Notícias Simples */
   .news-grid-3 {
     grid-template-columns: 1fr;
     padding: 0 15px;
   }
 
-  /* Página da Notícia (Single) */
   .article-title {
     font-size: 2.2rem;
     padding: 0 15px;
@@ -695,7 +667,6 @@
     font-size: 1.3rem;
   }
 
-  /* Esconder linhas decorativas que cortam o texto no mobile */
   .margin-line-lit,
   .margin-line {
     display: none;
