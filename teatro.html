@@ -25,35 +25,49 @@
     <!-- NAVBAR (Igual ao index) -->
     <nav class="navbar">
       <div class="container nav-container">
+        <!-- Logo -->
         <div class="logo">
           <a href="index.html">
             <img src="./assets/logo-revista-histeria_33 cópia.png" alt="Logo" />
           </a>
         </div>
+
+        <!-- Desktop Menu -->
         <ul class="nav-links">
           <li><a href="./musica.html" class="nav-item">Música</a></li>
           <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
           <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
           <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+
+          <!-- Dropdown -->
           <li class="dropdown-wrapper">
             <button class="nav-item dropdown-btn">
-              Mais <i data-lucide="chevron-down" class="icon-sm"></i>
+              Mais
+              <i data-lucide="chevron-down" class="icon-sm"></i>
             </button>
             <div class="dropdown-menu">
+              <a href="./historia.html">Historia histerica</a>
               <a href="./eventos.html">Eventos</a>
+              <a href="./sobre.html">Sobre nós</a>
             </div>
           </li>
         </ul>
+
+        <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="menu-btn">
           <i data-lucide="menu"></i>
         </button>
       </div>
+
+      <!-- Mobile Menu Panel -->
       <div id="mobile-menu" class="mobile-menu hidden">
         <a href="./musica.html" class="nav-item">Música</a>
         <a href="./cinema.html" class="nav-item">Cinema/TV</a>
         <a href="./literatura.html" class="nav-item">Literatura</a>
         <a href="./teatro.html" class="nav-item">Teatro</a>
+        <a href="./historia.html">Historia histerica</a>
         <a href="./eventos.html">Eventos</a>
+        <a href="./sobre.html">Sobre nós</a>
       </div>
     </nav>
 
@@ -281,6 +295,7 @@
             <div class="social-icons">
               <a href="#"><i class="fa-brands fa-instagram"></i></a>
               <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
             </div>
           </div>
         </div>

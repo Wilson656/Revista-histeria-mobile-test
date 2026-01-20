@@ -32,6 +32,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="./styles-pages.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -39,7 +40,9 @@
       <div class="container nav-container">
         <!-- Logo -->
         <div class="logo">
-          <img src="./assets/logo-revista-histeria_33 cópia.png" alt="" />
+          <a href="index.html">
+            <img src="./assets/logo-revista-histeria_33 cópia.png" alt="Logo" />
+          </a>
         </div>
 
         <!-- Desktop Menu -->
@@ -56,8 +59,9 @@
               <i data-lucide="chevron-down" class="icon-sm"></i>
             </button>
             <div class="dropdown-menu">
+              <a href="./historia.html">Historia histerica</a>
               <a href="./eventos.html">Eventos</a>
-              <a href="#team-section">Sobre nós</a>
+              <a href="./sobre.html">Sobre nós</a>
             </div>
           </li>
         </ul>
@@ -74,7 +78,10 @@
         <a href="./cinema.html" class="nav-item">Cinema/TV</a>
         <a href="./literatura.html" class="nav-item">Literatura</a>
         <a href="./teatro.html" class="nav-item">Teatro</a>
+           <a href="./historia.html">Historia histerica</a>
         <a href="./eventos.html">Eventos</a>
+          <a href="./sobre.html">Sobre nós</a>
+                  
       </div>
     </nav>
 
@@ -141,7 +148,7 @@
           <div class="section-header">
             <h2 class="title-lg">
               Principais <br />
-              <span class="text-brown">Notícias</span>
+              <span class="text-brown">matérias</span>
               <span class="underline-deco"></span>
             </h2>
           </div>
@@ -535,7 +542,7 @@
                         <span class="label-gray">Nasc.</span
                         ><span class="detail-val">15/03/2001 </span>
                       </div>
-                      <div>
+                      <div id="movie-lb">
                         <span class="label-gray">Artistas</span
                         ><span class="detail-val">One Direction </span>
                       </div>
@@ -617,9 +624,18 @@
       <!-- TRENDS -->
       <section class="trends-section">
         <div class="container">
-          <header class="trends-header">
-            <h2 class="title-lg">Teatro</h2>
-          </header>
+       <div class="container literature-container">
+          <div class="section-title-icon">
+            <div class="icon-box-tea">
+              <i data-lucide="drama"></i>
+            </div>
+            <div class="text-group">
+              <h2 class="title-lg">
+                <span class="text-brown">Teatro</span>
+              </h2>
+             
+            </div>
+          </div>
 
           <div class="trends-grid">
             <!-- Trend 1 -->
@@ -799,7 +815,7 @@
                 Não Perca Nada, <span class="text-pink">Assine!</span>
               </h2>
               <p class="subtitle-bold">
-                Receba as notícias mais quentes da cultura pop diretamente na
+                Receba as matérias mais quentes da cultura pop diretamente na
                 sua caixa de entrada.
               </p>
               <form class="newsletter-form">
@@ -914,6 +930,7 @@
             <div class="social-icons">
               <a href="#"><i class="fa-brands fa-instagram"></i></a>
               <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
             </div>
           </div>
         </div>

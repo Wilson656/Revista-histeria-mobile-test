@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Música - Revista Histeria</title>
+
+    <!-- Scripts e Fontes (Mesmos do index) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&family=Quicksand:wght@500;700&family=Inter:wght@400;600;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles-pages.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR (Igual ao index) -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/logo-revista-histeria_33 cópia.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-links">
+          <li><a href="./musica.html" class="nav-item">Música</a></li>
+          <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+          <li><a href="./literatura.html" class="nav-item">Literatura</a></li>
+          <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+
+          <!-- Dropdown -->
+          <li class="dropdown-wrapper">
+            <button class="nav-item dropdown-btn">
+              Mais
+              <i data-lucide="chevron-down" class="icon-sm"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a href="./historia.html">Historia histerica</a>
+              <a href="./eventos.html">Eventos</a>
+              <a href="#team-section">Sobre nós</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="./musica.html" class="nav-item">Música</a>
+        <a href="./cinema.html" class="nav-item">Cinema/TV</a>
+        <a href="./literatura.html" class="nav-item">Literatura</a>
+        <a href="./teatro.html" class="nav-item">Teatro</a>
+        <a href="./historia.html">Historia histerica</a>
+        <a href="./eventos.html">Eventos</a>
+        <a href="#team-section">Sobre nós</a>
+      </div>
+    </nav>
+
+    <!-- CONTEÚDO DA CATEGORIA -->
+    <!-- Mude a classe 'theme-music' para 'theme-cinema' ou 'theme-lit' para mudar as cores -->
+    <main class="theme-music">
+      <!-- Cabeçalho da Editoria -->
+      <header class="category-header" id="about">
+        <div class="container cat-header-content">
+          <div class="cat-icon-box">
+            <!-- Ícone muda conforme a pagina (Music, Film, Book, etc) -->
+            <i data-lucide="heart"></i>
+          </div>
+          <div class="cat-title">
+            <h1 class="headline-xl">
+              Sobre <span class="text-pink underline-thick">Nós</span>
+            </h1>
+          </div>
+        </div>
+        <!-- Texto decorativo fundo -->
+      </header>
+
+      <section class="team-section" id="team-section">
+        <div class="container">
+          <div class="about-intro">
+            <div class="intro-text">
+              <h1 class="headline-xl"></h1>
+              <div class="about-box">
+                <p>
+                  Histeria é uma revista que olha para a cultura pop com
+                  seriedade, afeto e senso crítico. Nascemos da vontade de dar
+                  profundidade a um universo que, por muito tempo, foi tratado
+                  como menor — especialmente quando associado ao público
+                  feminino. Falamos de filmes, séries, livros, música e
+                  fenômenos culturais que moldaram gerações, a partir de um
+                  olhar maduro, sensível e apaixonado. Acreditamos que a cultura
+                  pop é um espelho social poderoso e que, quando analisada com
+                  atenção, revela comportamentos, afetos e narrativas essenciais
+                  para entender o mundo contemporâneo. A Histeria ocupa um
+                  espaço ainda pouco explorado no Brasil: o de um veículo que
+                  leva o pop a sério, sem ironia ou condescendência. Aqui,
+                  gostar não é vergonha. Mais do que uma revista, somos um
+                  espaço de troca, identificação e comunidade — onde diferentes
+                  vozes podem se reconhecer, debater e celebrar aquilo que
+                  sempre amaram.
+                </p>
+              </div>
+            </div>
+            <div class="intro-image">
+              <div class="image-bg"></div>
+              <div class="image-frame">
+                <img
+                  src="./assets/time histeria foto com efeito.jpg"
+                  alt="Equipe"
+                />
+                <div class="est-badge"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-grid">
+            <!-- Card 1 -->
+            <div class="id-card pink rotate-neg">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">Editor</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/flávia.jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Flávia Paiva</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val"
+                        >Comunicação com habilitação em cinema</span
+                      >
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">18/12/2002 </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Sagitário</span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val"
+                          >Taylor Swift, Michael Jackson e BIGBANG</span
+                        >
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val"
+                          >A Inexplicável Lógica da Minha Vida
+                        </span>
+                      </div>
+
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic">Mary Poppins</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-pink">Flávia</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="id-card lilac rotate-pos">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">Editor</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/victoria (foto com efeito).jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Victoria R. Neves</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val"
+                        >Comunicação com Habilitação em Cinema</span
+                      >
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Peixes</span>
+                      </div>
+
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">15/03/2001 </span>
+                      </div>
+                      <div id="movie-lb">
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val">One Direction </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val">Anne de Green Gables </span>
+                      </div>
+
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic">Mamma Mia!</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-lilac">Victoria</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="id-card blue rotate-neg-lg">
+              <div class="id-header">
+                <h1 class="marker-font">Histeria</h1>
+                <span class="badge-role">EDITOR</span>
+              </div>
+              <div class="id-body">
+                <div class="id-photo-wrapper">
+                  <div class="tape"></div>
+                  <div class="polaroid">
+                    <img src="./assets/rayane (foto com efeito).jpg" />
+                  </div>
+                </div>
+                <div class="id-info">
+                  <div class="id-name-block">
+                    <span class="label">NOME</span>
+                    <span class="value-lg">Rayane Lima</span>
+                  </div>
+                  <div class="id-details">
+                    <div class="detail-row">
+                      <span class="label-gray">Formação</span
+                      ><span class="detail-val">Jornalismo / Cinema</span>
+                    </div>
+                    <div class="detail-grid">
+                      <div>
+                        <span class="label-gray">Signo</span
+                        ><span class="detail-val">Libra</span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Nasc.</span
+                        ><span class="detail-val">11/10/1998 </span>
+                      </div>
+
+                      <div>
+                        <span class="label-gray">Artistas</span
+                        ><span class="detail-val"
+                          >Taylor Swift, One Direction, BTS</span
+                        >
+                      </div>
+                      <div>
+                        <span class="label-gray">Livro</span
+                        ><span class="detail-val">As Irmãs Blue </span>
+                      </div>
+                      <div>
+                        <span class="label-gray">Filme</span
+                        ><span class="detail-val italic"
+                          >Cartas para Julieta</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="signature color-blue">Rayane</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (Mesmo do index) -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo-footer">
+              <img src="./assets/logo-revista-histeria_31.png" alt="" />
+            </div>
+            <p>Seu espaço de conteúdo semanal sobre a cultura pop.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="./musica.html" class="nav-item">Música</a></li>
+              <li><a href="./cinema.html" class="nav-item">Cinema/TV</a></li>
+              <li>
+                <a href="./literatura.html" class="nav-item">Literatura</a>
+              </li>
+              <li><a href="./teatro.html" class="nav-item">Teatro</a></li>
+
+              <li>
+                <a href="./eventos.html" class="nav-item">Eventos</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <!-- ... resto do footer ... -->
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Sua Revista Pop.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Ativar ícones novos
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
