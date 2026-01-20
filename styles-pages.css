@@ -38,9 +38,9 @@
 /* --- TEMA EVENTOS ATUALIZADO --- */
 .theme-event {
   /* Cores mais claras para o tema de ondas */
-  --page-accent: #eeee; /* Azul céu suave para detalhes */
+  --page-accent: #a1a9eb; /* Azul céu suave para detalhes */
   --page-bg: #e1f5fe; /* Azul muito clarinho para o fundo base */
-  --page-shadow: 8px 8px 0px 0px #eeee;
+  --page-shadow: 8px 8px 0px 0px #a1a9eb;
 }
 
 .theme-colunas {
@@ -392,7 +392,7 @@
   box-shadow: 6px 6px 0px #ffe36c;
 }
 .theme-event .news-card-simple {
-  box-shadow: 6px 6px 0px #eeee; /* Sombra atualizada */
+  box-shadow: 6px 6px 0px #a1a9eb; /* Sombra atualizada */
 }
 .theme-colunas .news-card-simple {
   box-shadow: 6px 6px 0px #7c3aed;
